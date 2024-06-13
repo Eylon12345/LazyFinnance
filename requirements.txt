@@ -4,3 +4,4 @@ pandas
 matplotlib
 phi
 openai
+python-dotenv
