@@ -2,9 +2,9 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from phi.assistant import Assistant
-from phi.llm.openai import OpenAIChat
-from phi.tools.yfinance import YFinanceTools
+#from phi.assistant import Assistant
+#from phi.llm.openai import OpenAIChat
+#from phi.tools.yfinance import YFinanceTools
 import os
 from dotenv import load_dotenv
 
@@ -101,16 +101,16 @@ st.success("""
 [Streamlit](https://streamlit.io).""", icon="ℹ️")
 
 # Create an instance of the Assistant
-assistant = Assistant(
+#assistant = Assistant(
     llm=OpenAIChat(model="gpt-4o", api_key=openai_api_key),
     tools=[YFinanceTools(stock_price=True, analyst_recommendations=False, company_info=True, company_news=True)],
     show_tool_calls=True,
 )
 
 # Input fields for the stocks to compare
-stock1 = st.text_input("Enter the first stock symbol")
+#stock1 = st.text_input("Enter the first stock symbol")
 
-if stock1:
+#if stock1:
     query1 = f"Generate a detailed report on {stock1} using get_company_info and get_current_stock_price."
     query11 = f"Generate a concise news report on {stock1} using company news."
     response1 = assistant.run(query1, stream=False)
