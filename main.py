@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 st.set_page_config(page_title="Rent vs. Buy Calculator Tool")
 
 # Load environment variables
-load_dotenv()
+#load_dotenv()
 openai_api_key = os.getenv('OPENAI_API_KEY')
 
 # Title of the application
