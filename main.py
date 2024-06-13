@@ -12,7 +12,7 @@ st.set_page_config(page_title="Rent vs. Buy Calculator Tool")
 
 # Load environment variables
 #load_dotenv()
-openai_api_key = os.getenv('OPENAI_API_KEY')
+openai_api_key = st.secrets["openai_api_key"]
 
 # Title of the application
 st.title('Rent vs. Buy Calculator')
