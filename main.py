@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 st.set_page_config(page_title="Rent vs. Buy Calculator Tool")
 
 # Load environment variables
-#load_dotenv()
+# load_dotenv()
 openai_api_key = st.secrets["openai_api_key"]
 
 # Title of the application
@@ -100,22 +100,23 @@ st.success("""
 |                | **3. Customization:** | **3. Market Risk:**       |
 [Streamlit](https://streamlit.io).""", icon="ℹ️")
 
+# Commented out due to missing imports and classes
 # Create an instance of the Assistant
-#assistant = Assistant(
-    llm=OpenAIChat(model="gpt-4o", api_key=openai_api_key),
-    tools=[YFinanceTools(stock_price=True, analyst_recommendations=False, company_info=True, company_news=True)],
-    show_tool_calls=True,
-)
+# assistant = Assistant(
+#    llm=OpenAIChat(model="gpt-4o", api_key=openai_api_key),
+#    tools=[YFinanceTools(stock_price=True, analyst_recommendations=False, company_info=True, company_news=True)],
+#    show_tool_calls=True,
+# )
 
 # Input fields for the stocks to compare
-#stock1 = st.text_input("Enter the first stock symbol")
+# stock1 = st.text_input("Enter the first stock symbol")
 
-#if stock1:
-    query1 = f"Generate a detailed report on {stock1} using get_company_info and get_current_stock_price."
-    query11 = f"Generate a concise news report on {stock1} using company news."
-    response1 = assistant.run(query1, stream=False)
-    response11 = assistant.run(query11, stream=False)
+# if stock1:
+#    query1 = f"Generate a detailed report on {stock1} using get_company_info and get_current_stock_price."
+#    query11 = f"Generate a concise news report on {stock1} using company news."
+#    response1 = assistant.run(query1, stream=False)
+#    response11 = assistant.run(query11, stream=False)
 
-    st.subheader(f"Report for {stock1}")
-    st.write(response1)
-    st.write(response11)
+#    st.subheader(f"Report for {stock1}")
+#    st.write(response1)
+#    st.write(response11)
